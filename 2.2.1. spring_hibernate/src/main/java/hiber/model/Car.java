@@ -5,14 +5,14 @@ import javax.persistence.*;
 @Entity
 public class Car {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String model;
 
     private int series;
 
-    @OneToOne (mappedBy = "car")
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public Car() {

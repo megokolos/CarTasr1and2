@@ -10,8 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.TypedQuery;
 import java.util.List;
+
 @Repository
-public class CarDaoImp implements CarDao{
+public class CarDaoImp implements CarDao {
     @Value("${maxCar}")
     private int maxCar;
 
@@ -21,9 +22,9 @@ public class CarDaoImp implements CarDao{
     @Transactional
     @Override
     public List<Car> listCars(Integer numberOfCars) {
-        TypedQuery<Car> query=sessionFactory.getCurrentSession().createQuery("from Car", Car.class);
-        if (numberOfCars ==null || numberOfCars >= maxCar) {
-            numberOfCars=maxCar;
+        TypedQuery<Car> query = sessionFactory.getCurrentSession().createQuery("from Car", Car.class);
+        if (numberOfCars == null || numberOfCars >= maxCar) {
+            numberOfCars = maxCar;
         }
         query.setMaxResults(numberOfCars);
         return query.getResultList();
