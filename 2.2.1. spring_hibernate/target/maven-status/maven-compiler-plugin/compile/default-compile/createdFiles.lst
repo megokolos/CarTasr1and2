@@ -11,7 +11,6 @@ hiber\config\MySpringMvcDispatcherServletInitializer.class
 hiber\dao\CarDao.class
 hiber\dao\CarDaoImp.class
 hiber\service\UserService.class
+hiber\controller\RestLoanController$1.class
 hiber\service\CarService.class
-hiber\testMain$1.class
 hiber\dao\UserDao.class
-hiber\testMain.class

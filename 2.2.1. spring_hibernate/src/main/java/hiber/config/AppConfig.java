@@ -99,6 +99,7 @@ public class AppConfig implements WebMvcConfigurer {
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
     }
+
     @Bean
     public ObjectMapper objectMapper() {
         return new ObjectMapper();
