@@ -46,6 +46,9 @@
           <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8" />
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.4" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="spring-hibernate/web/Web" />

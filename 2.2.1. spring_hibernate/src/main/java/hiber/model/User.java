@@ -1,13 +1,18 @@
 package hiber.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("id")
     private Long id;
 
     @Column(name = "name")
@@ -18,6 +23,10 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+    @Column (name = "income")
+    @JsonProperty("income")
+    private int income;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "car_id", referencedColumnName = "id")
@@ -63,6 +72,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getIncome() {
+        return income;
+    }
+
+    public void setIncome(int income) {
+        this.income = income;
     }
 
     public Car getCar() {

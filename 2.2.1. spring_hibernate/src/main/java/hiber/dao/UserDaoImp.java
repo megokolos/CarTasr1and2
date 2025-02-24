@@ -33,5 +33,8 @@ public class UserDaoImp implements UserDao {
         query.setParameter("series", series);
         return query.getResultList();
     }
-
+    @Override
+    public User getUserById(Long id) {
+        return sessionFactory.getCurrentSession().get(User.class, id);
+    }
 }

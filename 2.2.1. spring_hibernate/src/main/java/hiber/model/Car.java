@@ -12,6 +12,8 @@ public class Car {
 
     private int series;
 
+    private int price;
+
     @OneToOne(mappedBy = "car")
     private User user;
 
@@ -53,6 +55,14 @@ public class Car {
 
     public void setSeries(int series) {
         this.series = series;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
