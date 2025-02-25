@@ -27,6 +27,8 @@ import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:hibernate.properties")
+@PropertySource("classpath:car.properties")
+@PropertySource("classpath:loan.properties")
 @PropertySource("classpath:META-INF/spring.factories")
 @EnableTransactionManagement
 @ComponentScan(value = "hiber")

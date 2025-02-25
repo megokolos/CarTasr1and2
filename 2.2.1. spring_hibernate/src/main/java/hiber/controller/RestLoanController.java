@@ -35,11 +35,12 @@ public class RestLoanController {
     private double percentOfIncome;
     @Value("${loan.percentFromCarPrice}")
     private double percentOfCar;
+    @Value("${loan.url}")
+    private String url;
 
 
     @RequestMapping("/loan/{userId}")
     public String getLoanSum(@PathVariable("userId") Long id) {
-        String url = "https://66055cd12ca9478ea1801f2e.mockapi.io/api/users/income";
         List<User> jsonUsers = incomeClient.getUsersIncome(url, User.class);
         for (User user : jsonUsers) {
             if (Objects.equals(user.getId(), id)) {
